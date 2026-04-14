@@ -1,0 +1,7 @@
+model=mobilenet_v2
+test_accuracy=0.9814
+test_loss=0.0517
+best_val_accuracy=0.9842
+training_time_seconds=269.7
+epochs_run=22
+device=cuda

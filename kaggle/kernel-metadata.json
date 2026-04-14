@@ -1,0 +1,15 @@
+{
+  "id": "aghasonemmanuel/aerial-detection-training",
+  "title": "Aerial Detection Training",
+  "code_file": "train_detection_kaggle.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_internet": "true",
+  "dataset_sources": [
+    "aghasonemmanuel/aerial-bird-drone-detection"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}

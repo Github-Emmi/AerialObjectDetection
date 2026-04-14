@@ -1,0 +1,7 @@
+model=custom_cnn
+test_accuracy=0.8512
+test_loss=0.3589
+best_val_accuracy=0.8439
+training_time_seconds=624.6
+epochs_run=50
+device=cuda

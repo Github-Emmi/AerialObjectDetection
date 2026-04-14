@@ -1,0 +1,35 @@
+# Ignore everything, then whitelist what the container needs
+**
+
+# App code
+!app/**
+!src/**
+!requirements.txt
+!data.yaml
+
+# Model weights
+!models/classification/custom_cnn/best_model.pth
+!models/classification/resnet50/best_model.pth
+!models/classification/mobilenet_v2/best_model.pth
+!models/classification/efficientnet_b0/best_model.pth
+!models/detection/best.pt
+
+# Always ignore
+**/__pycache__
+**/.DS_Store
+venv/
+.git/
+runs/
+notebooks/
+kaggle/
+docs/
+tests/
+scripts/
+reports/
+classification_dataset/
+train/
+valid/
+test/
+*.jpg
+*.jpeg
+*.png

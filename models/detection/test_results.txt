@@ -1,0 +1,6 @@
+model=yolov8m
+test_mAP50=0.8130
+test_mAP50_95=0.5245
+epochs=100
+imgsz=416
+batch=16

@@ -1,0 +1,19 @@
+model=efficientnet_b0
+accuracy=0.9860
+precision=0.9861
+recall=0.9860
+f1=0.9860
+roc_auc=0.9996
+inference_ms=67.8
+params=4010110
+test_samples=215
+
+              precision    recall  f1-score   support
+
+        Bird       0.98      0.99      0.99       121
+       drone       0.99      0.98      0.98        94
+
+    accuracy                           0.99       215
+   macro avg       0.99      0.99      0.99       215
+weighted avg       0.99      0.99      0.99       215
+

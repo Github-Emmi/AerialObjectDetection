@@ -1,0 +1,4 @@
+custom_cnn,0.8439
+resnet50,0.9910
+mobilenet_v2,0.9842
+efficientnet_b0,0.9887

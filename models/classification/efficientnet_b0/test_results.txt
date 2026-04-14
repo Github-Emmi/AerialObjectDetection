@@ -1,0 +1,7 @@
+model=efficientnet_b0
+test_accuracy=0.9814
+test_loss=0.0394
+best_val_accuracy=0.9887
+training_time_seconds=215.2
+epochs_run=17
+device=cuda

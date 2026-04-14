@@ -1,0 +1,19 @@
+model=resnet50
+accuracy=0.9767
+precision=0.9777
+recall=0.9767
+f1=0.9767
+roc_auc=0.9990
+inference_ms=174.9
+params=23512130
+test_samples=215
+
+              precision    recall  f1-score   support
+
+        Bird       0.96      1.00      0.98       121
+       drone       1.00      0.95      0.97        94
+
+    accuracy                           0.98       215
+   macro avg       0.98      0.97      0.98       215
+weighted avg       0.98      0.98      0.98       215
+

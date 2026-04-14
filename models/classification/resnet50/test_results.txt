@@ -1,0 +1,7 @@
+model=resnet50
+test_accuracy=0.9721
+test_loss=0.0442
+best_val_accuracy=0.9910
+training_time_seconds=145.6
+epochs_run=11
+device=cuda
