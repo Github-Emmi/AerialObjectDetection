@@ -148,7 +148,7 @@ Open **http://localhost:8501**. The Docker image uses CPU-only PyTorch (~2.5 GB)
 
 The app is deployed on Render using Docker. Visit the live demo:
 
-> **[https://aerial-detection.onrender.com](https://aerial-detection.onrender.com)**
+> **[https://aerialobjectdetection.onrender.com](https://aerialobjectdetection.onrender.com)**
 
 ---
 
