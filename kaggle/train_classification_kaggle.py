@@ -150,7 +150,7 @@ def create_transfer_model(backbone: str, num_classes: int = 2, freeze_ratio: flo
     if backbone == "resnet50":
         model = models.resnet50(weights=models.ResNet50_Weights.IMAGENET1K_V2)
         num_features = model.fc.in_features
-        model.fc = nn.Sequential(nn.Dropout(0.5), nn.Linear(num_features, num_classes))
+        model.fc = nn.Sequential(nn.Dropout(0.5), nn.Linear(num_features, num_classes)) # type: ignore
     elif backbone == "mobilenet_v2":
         model = models.mobilenet_v2(weights=models.MobileNet_V2_Weights.IMAGENET1K_V2)
         num_features = model.classifier[1].in_features

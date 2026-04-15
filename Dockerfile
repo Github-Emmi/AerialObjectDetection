@@ -8,12 +8,15 @@ WORKDIR /app
 
 # System deps for OpenCV headless
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends libgl1 libglib2.0-0 && \
+    apt-get install -y --no-install-recommends libgl1 libglib2.0-0 curl && \
     rm -rf /var/lib/apt/lists/*
 
-# Install Python deps
+# Install Python deps (CPU-only PyTorch to keep image small)
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir \
+        torch==2.2.2+cpu torchvision==0.17.2+cpu \
+        --extra-index-url https://download.pytorch.org/whl/cpu && \
+    pip install --no-cache-dir -r requirements.txt
 
 # ── Copy application code & model weights ──────────────────────
 COPY src/ src/
