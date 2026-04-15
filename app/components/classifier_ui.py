@@ -58,7 +58,7 @@ def render_classifier():
         return
 
     image = Image.open(uploaded).convert("RGB")
-    col_upload.image(image, caption="Uploaded image", use_container_width=True)
+    col_upload.image(image, caption="Uploaded image", width="stretch")
 
     backbone, weight_key = MODEL_OPTIONS[model_label]
     model = load_classifier(weight_key)

@@ -31,7 +31,7 @@ def render_detector():
         return
 
     image = Image.open(uploaded).convert("RGB")
-    col_upload.image(image, caption="Uploaded image", use_container_width=True)
+    col_upload.image(image, caption="Uploaded image", width="stretch")
 
     model = load_detector()
     results = model.predict(image, conf=conf_threshold, verbose=False)
@@ -41,7 +41,7 @@ def render_detector():
 
     with col_result:
         st.subheader("Detections")
-        st.image(annotated, caption="Annotated result", use_container_width=True)
+        st.image(annotated, caption="Annotated result", width="stretch")
 
         boxes = result.boxes
         if len(boxes) == 0:
@@ -59,4 +59,4 @@ def render_detector():
                     "x1": int(x1), "y1": int(y1),
                     "x2": int(x2), "y2": int(y2),
                 })
-            st.dataframe(rows, use_container_width=True)
+            st.dataframe(rows, width="stretch")
