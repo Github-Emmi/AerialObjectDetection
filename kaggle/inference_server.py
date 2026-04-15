@@ -16,10 +16,10 @@ from torchvision import transforms, models
 from fastapi import FastAPI, File, UploadFile, Query
 from fastapi.responses import JSONResponse
 
-# ── Paths (Kaggle dataset mount) ───────────────────────────────
-DATASET_ROOT = "/kaggle/input/aerial-bird-drone-detection"
-CLASSIFICATION_DIR = os.path.join(DATASET_ROOT, "models", "classification")
-DETECTION_WEIGHTS = os.path.join(DATASET_ROOT, "models", "detection", "best.pt")
+# ── Paths (Kaggle dataset mounts) ──────────────────────────────
+WEIGHTS_ROOT = "/kaggle/input/aerial-detection-weights"
+CLASSIFICATION_DIR = os.path.join(WEIGHTS_ROOT, "models", "classification")
+DETECTION_WEIGHTS = os.path.join(WEIGHTS_ROOT, "models", "detection", "best.pt")
 
 CLASS_NAMES = ["Bird", "Drone"]
 
@@ -154,7 +154,7 @@ async def classify(
 
     device = get_device()
     model = get_classifier(backbone)
-    tensor = PREPROCESS(image).unsqueeze(0).to(device)
+    tensor = PREPROCESS(image).unsqueeze(0).to(device) #type: ignore
 
     with torch.no_grad():
         logits = model(tensor)
