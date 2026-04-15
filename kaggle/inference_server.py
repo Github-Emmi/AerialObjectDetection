@@ -18,8 +18,8 @@ from fastapi.responses import JSONResponse
 
 # ── Paths (Kaggle dataset mounts) ──────────────────────────────
 WEIGHTS_ROOT = "/kaggle/input/aerial-detection-weights"
-CLASSIFICATION_DIR = os.path.join(WEIGHTS_ROOT, "models", "classification")
-DETECTION_WEIGHTS = os.path.join(WEIGHTS_ROOT, "models", "detection", "best.pt")
+CLASSIFICATION_DIR = os.path.join(WEIGHTS_ROOT, "classification")
+DETECTION_WEIGHTS = os.path.join(WEIGHTS_ROOT, "detection", "best.pt")
 
 CLASS_NAMES = ["Bird", "Drone"]
 
