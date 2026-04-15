@@ -12,17 +12,21 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Install Python deps (CPU-only PyTorch to keep image small)
-COPY requirements.txt .
+COPY requirements.render.txt .
 RUN pip install --no-cache-dir \
         torch==2.2.2+cpu torchvision==0.17.2+cpu \
         --extra-index-url https://download.pytorch.org/whl/cpu && \
-    pip install --no-cache-dir -r requirements.txt
+    pip install --no-cache-dir -r requirements.render.txt
 
 # ── Copy application code & model weights ──────────────────────
 COPY src/ src/
 COPY app/ app/
 COPY models/ models/
 COPY data.yaml .
+
+# Remote GPU inference via Kaggle+Ngrok (set in Render dashboard)
+# When set, inference is forwarded to the GPU server; local CPU is fallback.
+ENV INFERENCE_API_URL=""
 
 EXPOSE 8501
 

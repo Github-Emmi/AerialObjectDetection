@@ -1,0 +1,12 @@
+# Slim requirements for Render "thin client" deployment.
+# When INFERENCE_API_URL is set, inference runs on Kaggle GPU via Ngrok.
+# PyTorch/YOLO are still included for local CPU fallback.
+torch==2.2.2
+torchvision==0.17.2
+ultralytics==8.4.37
+streamlit==1.56.0
+Pillow>=10.0.0
+numpy==1.26.4
+opencv-python-headless>=4.8.0
+pyyaml>=6.0
+requests>=2.31.0
