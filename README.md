@@ -3,6 +3,8 @@
 A deep learning solution that **classifies** aerial images as **Bird** or **Drone** and **detects + localizes** them with bounding boxes in real-world scenes. Built with PyTorch, YOLOv8, and deployed via Streamlit & Docker.
 
 > **Built by [Aghason Emmanuel Ibeabuchi](https://github.com/Github-Emmi) (Emmi Dev Codes) — Lagos, Nigeria**
+>The app is pushed to a github respiratory using git push origin version1. Visit the live demo:
+> **[https://github.com/Github-Emmi/AerialObjectDetection](https://github.com/Github-Emmi/AerialObjectDetection)**
 
 ---
 
