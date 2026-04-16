@@ -17,7 +17,7 @@ from fastapi import FastAPI, File, UploadFile, Query
 from fastapi.responses import JSONResponse
 
 # ── Paths (Kaggle dataset mounts) ──────────────────────────────
-WEIGHTS_ROOT = "/kaggle/input/aerial-detection-weights"
+WEIGHTS_ROOT = "/kaggle/input/datasets/aghasonemmanuel/aerial-detection-weights"
 CLASSIFICATION_DIR = os.path.join(WEIGHTS_ROOT, "classification")
 DETECTION_WEIGHTS = os.path.join(WEIGHTS_ROOT, "detection", "best.pt")
 
