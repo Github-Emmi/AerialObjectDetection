@@ -11,7 +11,7 @@ __pycache__/
 .venv/
 venv/
 env/
-
+VIDEO_SCRIPTS.md
 ## Model weights
 # Keep classification subdirectory weights tracked (needed for app)
 models/classification/*.pth
